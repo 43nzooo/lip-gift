@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Your Lip ♡</title>
+<style>
+  :root{
+    --bg:#fbf6f1;
+    --card:#fffdfb;
+    --pink:#d9798c;
+    --pink-light:#f6dfe4;
+    --text:#292122;
+    --muted:#756568;
+    --line:#ead8d5;
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",
+      "Yu Gothic",Meiryo,sans-serif;
+  }
+
+  .hero{
+    padding:30px 20px 26px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 15% 20%, #f5cfd7 0 18px, transparent 19px),
+      radial-gradient(circle at 88% 28%, #f2d9c7 0 13px, transparent 14px),
+      linear-gradient(145deg,#fffaf7,#f7e7e5);
+    border-bottom:1px solid var(--line);
+  }
+
+  .small{
+    font-size:12px;
+    letter-spacing:.18em;
+    color:var(--muted);
+    text-transform:uppercase;
+  }
+
+  h1{
+    margin:8px 0 10px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:42px;
+    font-weight:500;
+    line-height:1;
+  }
+
+  .lip{
+    font-style:italic;
+  }
+
+  .hero p{
+    margin:0 auto;
+    max-width:500px;
+    line-height:1.9;
+    font-size:14px;
+  }
+
+  main{
+    width:min(720px,100%);
+    margin:auto;
+    padding:22px 16px 50px;
+  }
+
+  .notice{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(80,40,40,.05);
+  }
+
+  .notice strong{
+    color:var(--pink);
+    font-size:20px;
+  }
+
+  .joke{
+    margin-top:8px;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  h2{
+    margin:28px 0 12px;
+    text-align:center;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    font-weight:500;
+  }
+
+  .brands{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .brand{
+    display:block;
+    padding:16px 10px;
+    text-decoration:none;
+    color:var(--text);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    text-align:center;
+    transition:.15s;
+  }
+
+  .brand:hover{
+    transform:translateY(-2px);
+    border-color:var(--pink);
+    box-shadow:0 5px 16px rgba(80,40,40,.08);
+  }
+
+  .brand-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:20px;
+  }
+
+  .brand-sub{
+    display:block;
+    margin-top:4px;
+    font-size:11px;
+    color:var(--muted);
+  }
+
+  .form-card{
+    margin-top:30px;
+    padding:20px;
+    background:linear-gradient(145deg,#fff,#fff4f5);
+    border:1px solid #efcbd2;
+    border-radius:20px;
+  }
+
+  label{
+    display:block;
+    margin:13px 0 6px;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  input{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:white;
+    font-size:14px;
+    outline:none;
+  }
+
+  input:focus{
+    border-color:var(--pink);
+  }
+
+  button{
+    width:100%;
+    margin-top:17px;
+    padding:14px;
+    border:0;
+    border-radius:999px;
+    background:var(--pink);
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+  }
+
+  button:active{transform:scale(.99)}
+
+  .result{
+    display:none;
+    margin-top:12px;
+    padding:12px;
+    border-radius:12px;
+    background:#fff;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+  }
+
+  footer{
+    padding:0 20px 30px;
+    text-align:center;
+    color:var(--muted);
+    font-size:11px;
+  }
+
+  @media(min-width:600px){
+    .brands{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="small">A little gift for you</div>
+  <h1>Choose Your <span class="lip">Lip</span> ♡</h1>
+  <p>
+    好きなリップを1本、選んでね。<br>
+    ブランド、キラキラ度、値段、お好きにどうぞ！！
+  </p>
+</header>
+
+<main>
+
+  <section class="notice">
+    <strong>💄 田中かかしが買います。</strong>
+    <div class="joke">
+      「これがいい！」が見つかったら教えて！<br>
+      
+    </div>
+  </section>
+
+  <h2>Brands ♡</h2>
+
+  <!-- ブランドを増やすときは、このブロックをコピーしてください -->
+  <section class="brands">
+
+    <a class="brand" href="https://www.dior.com/ja_jp/beauty" target="_blank" rel="noopener">
+      <span class="brand-name">Dior</span>
+      <span class="brand-sub">ディオール</span>
+    </a>
+
+    <a class="brand" href="https://www.chanel.com/jp/" target="_blank" rel="noopener">
+      <span class="brand-name">CHANEL</span>
+      <span class="brand-sub">シャネル</span>
+    </a>
+
+    <a class="brand" href="https://www.yslbeauty.jp/" target="_blank" rel="noopener">
+      <span class="brand-name">YSL</span>
+      <span class="brand-sub">イヴ・サンローラン</span>
+    </a>
+
+    <a class="brand" href="https://www.rmkrmk.com/" target="_blank" rel="noopener">
+      <span class="brand-name">RMK</span>
+      <span class="brand-sub">アールエムケー</span>
+    </a>
+
+    <a class="brand" href="https://www.suqqu.com/" target="_blank" rel="noopener">
+      <span class="brand-name">SUQQU</span>
+      <span class="brand-sub">スック</span>
+    </a>
+
+    <a class="brand" href="https://www.narscosmetics.jp/" target="_blank" rel="noopener">
+      <span class="brand-name">NARS</span>
+      <span class="brand-sub">ナーズ</span>
+    </a>
+
+    <a class="brand" href="https://www.maccosmetics.jp/" target="_blank" rel="noopener">
+      <span class="brand-name">M·A·C</span>
+      <span class="brand-sub">マック</span>
+    </a>
+
+    <a class="brand" href="https://www.kanebo-global.com/jp/ja/" target="_blank" rel="noopener">
+      <span class="brand-name">KANEBO</span>
+      <span class="brand-sub">カネボウ</span>
+    </a>
+
+    <a class="brand" href="https://www.decorte.com/" target="_blank" rel="noopener">
+      <span class="brand-name">DECORTÉ</span>
+      <span class="brand-sub">コスメデコルテ</span>
+    </a>
+
+    <a class="brand" href="https://www.addiction-beauty.com/" target="_blank" rel="noopener">
+      <span class="brand-name">ADDICTION</span>
+      <span class="brand-sub">アディクション</span>
+    </a>
+
+    <!-- ↓ここに好きなブランドを追加できます↓ -->
+
+  </section>
+
+  <section class="form-card">
+    <h2 style="margin-top:0">これがいい！ 💋</h2>
+
+    <label for="brand">ブランド名</label>
+    <input id="brand" placeholder="例：Dior">
+
+    <label for="product">商品名</label>
+    <input id="product" placeholder="例：アディクト リップ グロウ">
+
+    <label for="url">商品ページURL</label>
+    <input id="url" type="url" placeholder="商品ページのURLを貼ってね">
+
+    <button onclick="sendWish()">💌 田中かかしに送る</button>
+
+    <div class="result" id="result"></div>
+  </section>
+
+</main>
+
+<footer>
+  Choose something you love ♡<br>
+  Presented with love by 田中かかし
+</footer>
+
+<script>
+function sendWish(){
+
+  const brand = document.getElementById("brand").value.trim();
+  const product = document.getElementById("product").value.trim();
+  const url = document.getElementById("url").value.trim();
+
+  if(!brand || !product || !url){
+    alert("ブランド・商品名・商品ページURLを入れてね♡");
+    return;
+  }
+
+  const text =
+`💄 これがいい！
+
+ブランド：${brand}
+商品名：${product}
+商品ページ：
+${url}
+
+田中かかし、よろしくお願いします♡`;
+
+  // LINEのメッセージ作成画面を開く
+  const lineUrl =
+    "https://line.me/R/msg/text/?" + encodeURIComponent(text);
+
+  // 念のため内容も表示
+  const result = document.getElementById("result");
+  result.style.display = "block";
+  result.innerText = "LINEを開きます。もし開かなければ、この内容をコピーして送ってね♡";
+
+  window.location.href = lineUrl;
+}
+</script>
+
+</body>
+</html>
